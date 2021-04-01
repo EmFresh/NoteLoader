@@ -70,7 +70,7 @@ public class DebugTools : MonoBehaviour
             {
                 return GetAllFiles(d, searchPattern);
             }
-            catch (Exception e)
+            catch 
             {
                 return Enumerable.Empty<string>();
             }

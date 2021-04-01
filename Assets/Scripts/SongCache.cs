@@ -1,9 +1,9 @@
-﻿using AudicaTools;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AudicaTools;
 
 namespace NoteLoader.Cache
 {
@@ -12,11 +12,11 @@ namespace NoteLoader.Cache
         private static string songFolderHash;
 
         public static Dictionary<string, Audica.AudicaMetadata> songs;
-        
+
         public static void ProcessSongs()
         {
             string newFolderHash = GetLocalFolderHash();
-            if (songFolderHash == newFolderHash) return;
+            if (songFolderHash == newFolderHash)return;
             else
             {
                 songs = new Dictionary<string, Audica.AudicaMetadata>();
@@ -29,7 +29,7 @@ namespace NoteLoader.Cache
                 }
                 songFolderHash = newFolderHash;
             }
-            
+
         }
 
         private static string GetLocalFolderHash()
